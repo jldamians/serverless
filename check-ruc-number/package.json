@@ -6,7 +6,8 @@
   "devDependencies": {},
   "scripts": {
     "deploy": "sls deploy -v",
-    "undeploy": "sls remove"
+    "undeploy": "sls remove",
+    "test": "sls invoke -f check -p data-jldamians.json"
   },
   "author": "jldamians",
   "license": "ISC",

@@ -10,4 +10,4 @@ $ sls invoke -f check -d "{\"number\": \"10460033280\"}"
 ## o
 $ sls invoke -f check -p data-jldamians.json
 ## o
-$ sls invoke -f check -p data-jadamians.json
+$ sls invoke --function check -path data-jadamians.json
