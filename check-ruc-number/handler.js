@@ -1,5 +1,6 @@
 'use strict';
 
+const HttpStatus = require('http-status-codes');
 const Ruc = require('./Ruc');
 
 module.exports.check = async ({ number }) => {
@@ -9,12 +10,12 @@ module.exports.check = async ({ number }) => {
     const ruc = Ruc.of(number);
 
     response = {
-      statusCode: 200,
+      statusCode: HttpStatus.OK,
       body: 'Número de ruc correcto',
     };
   } catch ({ message }) {
     response = {
-      statusCode: 404,
+      statusCode: HttpStatus.NOT_FOUND,
       body: message,
     };
   }
