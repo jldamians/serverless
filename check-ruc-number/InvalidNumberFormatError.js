@@ -5,7 +5,7 @@ class InvalidNumberFormatError extends Error{
     }
 
     static throwBecauseOf(ruc) {
-        return new this(`El número de ruc ${ruc} es incorrecto`);
+        throw new this(`El número de ruc ${ruc} es incorrecto`);
     }
 }
 

@@ -12,7 +12,6 @@ class Ruc {
 
     checking(number) {
         const isValidRuc = this.isOk(number);
-
         if (!isValidRuc) {
             InvalidNumberFormatError.throwBecauseOf(number);
         }
@@ -22,7 +21,7 @@ class Ruc {
         const regexp = /^(10|15|16|17|20)[0-9]{9}$/;
 
         if (!regexp.test(ruc)) {
-          return false;
+            return false;
         }
     
         // obtenemos el dígito de verificación del número de ruc (último dígito)
@@ -30,7 +29,7 @@ class Ruc {
     
         // obtenemos los primeros 10 dígitos del número de ruc
         const firstTenDigits = Array.from(ruc.substr(0, 10)).map((digit) => {
-          return Number.parseInt(digit);
+            return Number.parseInt(digit);
         });
     
         // calculamos la suma de verificación

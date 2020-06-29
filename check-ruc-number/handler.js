@@ -2,18 +2,20 @@
 
 const Ruc = require('./Ruc');
 
-module.exports.hello = async event => {
+module.exports.check = async ({ number }) => {
   let response = {};
 
   try {
+    const ruc = Ruc.of(number);
+
     response = {
       statusCode: 200,
-      body: JSON.stringify('Número de ruc correcto'),
+      body: 'Número de ruc correcto',
     };
   } catch ({ message }) {
     response = {
       statusCode: 404,
-      body: JSON.stringify('Número de ruc incorrecto'),
+      body: message,
     };
   }
 
