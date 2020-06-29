@@ -1,0 +1,16 @@
+{
+  "name": "check-ruc-number",
+  "description": "$ serverless deploy  ## o $ sls deploy",
+  "version": "1.0.0",
+  "main": "handler.js",
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "sls deploy -v",
+    "undeploy": "sls remove"
+  },
+  "author": "jldamians",
+  "license": "ISC",
+  "dependencies": {
+    "http-status-codes": "^1.4.0"
+  }
+}
