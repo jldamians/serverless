@@ -13,7 +13,7 @@
 
 service: check-ruc-number
 # app and org for use with dashboard.serverless.com
-app: check-ruc-number
+#app: check-ruc-number
 #org: check-ruc-number
 
 # You can pin your service to only deploy with a specific Serverless version
@@ -49,13 +49,14 @@ provider:
 #    variable1: value1
 
 # you can add packaging information here
-#package:
+package:
 #  include:
 #    - include-me.js
 #    - include-me-dir/**
-#  exclude:
-#    - exclude-me.js
-#    - exclude-me-dir/**
+  exclude:
+    - "*.md"
+    - "*.json"
+    - "*.lock"
 
 functions:
   check:
